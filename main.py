@@ -16,8 +16,9 @@ import subprocess
 from slacker import Slacker
 
 TOKEN = open('TOKEN.txt', 'r')
+TOKENKEY = TOKEN.readline()
 
-slack = Slacker(TOKEN)
+slack = Slacker(TOKENKEY)
 
 message = "test"
 slack.chat.post_message('#random',message);
